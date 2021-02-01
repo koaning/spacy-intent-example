@@ -52,7 +52,7 @@ commands:
   - name: "train"
     help: "Train a text classification model"
     script:
-      - "python -m spacy train configs/${vars.config} --output training/ --paths.train corpus/${vars.train}.spacy --paths.dev corpus/${vars.dev}.spacy"
+      - "python -m spacy train configs/${vars.config} --output training/ --paths.train corpus/${vars.train}.spacy --paths.dev corpus/${vars.dev}.spacy --verbose"
     deps:
       - "corpus/${vars.train}.spacy"
       - "corpus/${vars.dev}.spacy"
@@ -67,4 +67,4 @@ commands:
       - "corpus/${vars.dev}.spacy"
       - "training/model-best"
     outputs:
-      - "training/metrics.json"
+      - "training/metrics.json"  

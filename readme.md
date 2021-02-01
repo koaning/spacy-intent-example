@@ -4,6 +4,22 @@ This is a demo project. To run everything simply run;
 
 ```
 python -m spacy project run train
+python -m spacy project run evaluate
+```
+
+If you like the results, you can package the project. 
+
+```
+python -m spacy package ./training/model-best ./packages --name intentmod --version 0.1.0
+cd ./packages/en_intentmod-0.1.0
+pip install dist/en_intentmod-0.1.0.tar.gz
+```
+
+You can now load the model! 
+
+```python
+import spacy
+nlp = spacy.load("en_intentmod")
 ```
 
 
