@@ -1,5 +1,9 @@
-## Conversion 
 
+
+<details>
+  <summary><b>Pandas Conversion Script.</b></summary>
+This is what we've internally used to turn the `.csv` file into `.jsonl`.
+  
 ```python
 import pandas as pd 
 
@@ -15,3 +19,5 @@ df_test = pd.DataFrame({'text': X_test, 'label': y_test})
 df_train.to_json("spacy-experiments/intent-benchmark/train.jsonl", orient="records")
 df_test.to_json("spacy-experiments/intent-benchmark/test.jsonl", orient="records")
 ```
+
+</details>
