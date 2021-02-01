@@ -1,3 +1,10 @@
+## spaCy demo: Intent Detection
+
+This is a demo project. To run everything simply run;
+
+```
+python -m spacy project run train
+```
 
 
 <details>
